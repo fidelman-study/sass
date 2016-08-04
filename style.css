@@ -1,0 +1,275 @@
+/* CSS extensions */
+#main {
+  color: red;
+}
+#main body {
+  background: green;
+}
+#main:hover {
+  color: blue;
+}
+
+/* Nested */
+.funky {
+  background-color: red;
+  background-image: green;
+  font: 20px/24px fantasy;
+  font-weight: bold;
+}
+
+/* Variables */
+main {
+  color: beige;
+}
+
+/* String */
+body {
+  content: "hello";
+}
+
+p {
+  font: 12px/24px;
+  color: #555555;
+}
+
+body {
+  color: rgba(255, 0, 0, 0.7);
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+p {
+  cursor: e-relize;
+  content: "I ate 3 pies!";
+}
+
+header {
+  color: red;
+}
+
+p {
+  content: "Hi";
+}
+
+.sidebar {
+  color: red;
+}
+@media screen and (orientaion: landscape) {
+  .sidebar {
+    color: blue;
+  }
+}
+
+.error, .noterror {
+  color: red;
+}
+
+.noterror {
+  background: green;
+}
+
+.lol.intrusion, .lol.config {
+  color: red;
+}
+
+#context a.note {
+  color: blue;
+}
+
+.class-1 {
+  color: red;
+}
+.class-2 {
+  color: blue;
+}
+
+p {
+  border: 1px dotted;
+}
+
+.item-1 {
+  width: 2em;
+}
+
+.item-2 {
+  width: 4em;
+}
+
+.item-3 {
+  width: 6em;
+}
+
+.item-1 {
+  width: 2em 8 1;
+}
+
+.item-2 {
+  width: 2em 8 2;
+}
+
+.item-3 {
+  width: 6em;
+}
+
+.item-2 {
+  width: 4em;
+}
+
+.item-1 {
+  width: 2em;
+}
+
+.puma-icon {
+  background: url("/images/puma.png");
+}
+
+.leo-icon {
+  background: url("/images/leo.png");
+}
+
+.tiger-icon {
+  background: url("/images/tiger.png");
+}
+
+h1 {
+  font-size: 1em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 3em;
+}
+
+.item-6 {
+  width: 12em;
+}
+
+.item-4 {
+  width: 8em;
+}
+
+.item-2 {
+  width: 4em;
+}
+
+a {
+  color: red;
+}
+
+p {
+  color: red;
+  background: green;
+  border-color: blue;
+}
+
+html #logo {
+  color: red;
+}
+
+.colors {
+  background-color: blue;
+  color: red;
+  border-color: blue;
+}
+
+.colors {
+  color: red;
+  background-color: blue;
+  border-color: blue;
+}
+
+#sidebar {
+  width: 240px;
+}
+
+.rgbFunc {
+  color: #fff00a;
+  content: "red - 255";
+  content: "green - 240";
+  content: "blue - 10";
+  background-color: #e8dc1e;
+}
+
+.hslFunc {
+  color: #d9bb26;
+  content: "hue - 50deg";
+  content: "saturation - 70%";
+  content: "lightness - 50%";
+  color: #bbd926;
+  color: #e8d67d;
+  color: #ad961f;
+  color: #ffd500;
+  color: #ccb333;
+  color: gray;
+  content: "complement - #2644d9";
+  color: #2644d9;
+}
+
+.opacityFunc {
+  color: rgba(255, 10, 20, 0.6);
+  content: "alpha - 0.6";
+  content: "opacity - 0.6";
+  color: rgba(255, 10, 20, 0.4);
+  color: rgba(255, 10, 20, 0.5);
+  color: rgba(255, 10, 20, 0.5);
+  color: rgba(255, 10, 20, 0.8);
+  color: rgba(255, 10, 20, 0.8);
+}
+
+.otherColorFunc {
+  color: #960096;
+  content: "adjust-color - #c80096";
+  content: "scale-color - #a00096";
+  content: "change-color - #320096";
+  content: "ie-hex-str - #FF960096";
+}
+
+.stringsFunc {
+  content: quote;
+  content: "unquote";
+  content: "str-length - 5";
+  content: "str-insert - qHeiuote";
+  content: "str-index - 1";
+  content: "str-slice - uot";
+  content: "to-upper-case - QUOTE";
+  content: "to-lower-case - quote";
+}
+
+.numFunc {
+  content: 20%;
+  content: 3;
+  content: 3;
+  content: 2;
+  content: 2;
+  content: 0;
+  content: 2;
+  content: 41;
+}
+
+.listFunc {
+  content: "length - 3";
+  content: "nth - j";
+  content: "k", "jj", "z";
+  content: "join - k, j, z, a, b, c";
+  content: "append - k, j, z, o";
+  content: "zip - 1px solid white, 2px dotted black, 3px double red";
+  content: "index - 2";
+  content: "list-separator - comma";
+}
+
+.mapFunc {
+  content: "map-get - ";
+  content: "map-keys - foo, bar";
+  content: "map-values - 1, 2";
+  content: "map-has-key - true";
+}
+
+.selectorFunc {
+  content: "selector-nest - html body .wrapper";
+}
+
+.miscellaneousFunc {
+  content: "if - true";
+}

@@ -1,0 +1,604 @@
+/* CSS extensions */
+#main {
+	color: red;
+	body {
+		background: green;
+	}
+	&:hover {
+		color: blue;
+	}
+}
+/* Nested */
+.funky {
+	font: 20px/24px fantasy {
+		weight: bold;
+	}
+}
+/* Variables */
+$color: red;
+main {
+	color: $color;
+}
+/* String */
+$content: "content";
+body {
+	#{$content}: "hello";
+}
+// Colors
+// 'aqua'
+// 'darkgrey'       
+// 'darkslategrey'  
+// 'dimgrey'        
+// 'fuchsia'        
+// 'grey'           
+// 'lightgrey'      
+// 'lightslategrey' 
+// 'slategrey'      
+// 'aliceblue'            
+// 'antiquewhite'         
+// 'aquamarine'           
+// 'azure'                
+// 'beige'                
+// 'bisque'               
+// 'black'                
+// 'blanchedalmond'       
+// 'blue'                 
+// 'blueviolet'           
+// 'brown'                
+// 'burlywood'            
+// 'cadetblue'            
+// 'chartreuse'           
+// 'chocolate'            
+// 'coral'                
+// 'cornflowerblue'       
+// 'cornsilk'             
+// 'crimson'              
+// 'cyan'                 
+// 'darkblue'             
+// 'darkcyan'             
+// 'darkgoldenrod'        
+// 'darkgray'             
+// 'darkgreen'            
+// 'darkkhaki'            
+// 'darkmagenta'          
+// 'darkolivegreen'       
+// 'darkorange'           
+// 'darkorchid'           
+// 'darkred'              
+// 'darksalmon'           
+// 'darkseagreen'         
+// 'darkslateblue'        
+// 'darkslategray'        
+// 'darkturquoise'        
+// 'darkviolet'           
+// 'deeppink'             
+// 'deepskyblue'          
+// 'dimgray'              
+// 'dodgerblue'           
+// 'firebrick'            
+// 'floralwhite'          
+// 'forestgreen'          
+// 'gainsboro'            
+// 'ghostwhite'           
+// 'gold'                 
+// 'goldenrod'            
+// 'gray'                 
+// 'green'                
+// 'greenyellow'          
+// 'honeydew'             
+// 'hotpink'              
+// 'indianred'            
+// 'indigo'               
+// 'ivory'                
+// 'khaki'                
+// 'lavender'             
+// 'lavenderblush'        
+// 'lawngreen'            
+// 'lemonchiffon'         
+// 'lightblue'            
+// 'lightcoral'           
+// 'lightcyan'            
+// 'lightgoldenrodyellow' 
+// 'lightgreen'           
+// 'lightgray'            
+// 'lightpink'            
+// 'lightsalmon'          
+// 'lightseagreen'        
+// 'lightskyblue'         
+// 'lightslategray'       
+// 'lightsteelblue'       
+// 'lightyellow'          
+// 'lime'                 
+// 'limegreen'            
+// 'linen'                
+// 'magenta'              
+// 'maroon'               
+// 'mediumaquamarine'     
+// 'mediumblue'           
+// 'mediumorchid'         
+// 'mediumpurple'         
+// 'mediumseagreen'       
+// 'mediumslateblue'      
+// 'mediumspringgreen'    
+// 'mediumturquoise'      
+// 'mediumvioletred'      
+// 'midnightblue'         
+// 'mintcream'            
+// 'mistyrose'            
+// 'moccasin'             
+// 'navajowhite'          
+// 'navy'                 
+// 'oldlace'              
+// 'olive'                
+// 'olivedrab'            
+// 'orange'               
+// 'orangered'            
+// 'orchid'               
+// 'palegoldenrod'        
+// 'palegreen'            
+// 'paleturquoise'        
+// 'palevioletred'        
+// 'papayawhip'           
+// 'peachpuff'            
+// 'peru'                 
+// 'pink'                 
+// 'plum'                 
+// 'powderblue'           
+// 'purple'               
+// 'red'                  
+// 'rebeccapurple'        
+// 'rosybrown'            
+// 'royalblue'            
+// 'saddlebrown'          
+// 'salmon'               
+// 'sandybrown'           
+// 'seagreen'             
+// 'seashell'             
+// 'sienna'               
+// 'silver'               
+// 'skyblue'              
+// 'slateblue'            
+// 'slategray'            
+// 'snow'                 
+// 'springgreen'          
+// 'steelblue'            
+// 'tan'                  
+// 'teal'                 
+// 'thistle'              
+// 'tomato'               
+// 'transparent'          
+// 'turquoise'            
+// 'violet'               
+// 'wheat'                
+// 'white'                
+// 'whitesmoke'           
+// 'yellow'               
+// 'yellowgreen'
+p {
+	$font-size: 12px;
+	$line-height: 24px;
+	font: #{$font-size}/#{$line-height};
+	color: #333 + #222;
+}
+body {
+	$translucent-red: rgba(255, 0, 0, 0.4);
+	color: opacify($translucent-red, 0.3);
+	background-color: transparentize($translucent-red, 0.3);
+}
+
+p {
+	cursor: e + -relize;
+	content: "I ate #{2 + 1} pies!";
+}
+
+header {
+	$color: red;
+	$color: green !default;
+	color: $color;
+}
+
+@mixin First($content) {
+	content: $content
+}
+p {
+	@include First("Hi");
+}
+
+.sidebar {
+	color: red;
+	@media screen and (orientation: landscape) {
+		color: blue;
+	}
+}
+
+.error {
+	color: red;
+}
+.noterror {
+	@extend .error;
+	background: black;
+}
+
+.lol.intrusion {
+	color: red;
+}
+.config {
+	@extend .intrusion
+}
+#context a%extreme {
+	color: blue;
+}
+.note {
+	@extend %extreme
+}
+
+.class-1 {
+	color: red;
+	@at-root .class-2 {
+		color: blue;
+	}
+}
+
+p {
+	@if 1 + 1 == 3 {
+		border: 1px solid;
+	}
+	@else {
+		border: 1px dotted
+	}
+}
+
+@for $i from 1 through 3 {
+	.item-#{$i} {
+		width: 2em * $i
+	}
+}
+@for $i from 1 to 3 {
+	.item-#{$i} {
+		width: 2em 8 $i
+	}
+}
+@for $i from 3 through 1 {
+	.item-#{$i} {
+		width: 2em * $i
+	}
+}
+$list: puma, black, default;
+@each $animal, $color, $cursor in $list, (sea-slug, blue, pointer), (egret, white, move) {
+	.#{$animal}-icon {
+		background: url('/images/#{$animal}.png');
+		border: 1px solid $color;
+		cursor: $cursor;
+	}
+}
+
+@each $header, $size in (h1: 2em, h2: 2em, h3: 3em) {
+	#{$header} {
+		font-size: $size;
+	}
+}
+
+$i: 6;
+@while $i > 0 {
+	.item-#{$i} {
+		width: 2em * $i;
+	}
+	$i: $i - 2;
+}
+
+
+@mixin a() {
+	a {
+		color: red;
+	}
+}
+@include a();
+
+@mixin box-shadow($shadows...) {
+	box-shadow: $shadows;
+}
+.shadows {
+	@include box-shadow(0px 4px 5px #666, 2px 6px 10px #999);
+}
+
+$values: #f00, #0f0, #00f;
+@mixin colors($text, $background, $border) {
+	color: $text;
+	background: $background;
+	border-color: $border;
+}
+
+p {
+	@include colors($values...);
+}
+
+@mixin apply {
+	html {
+		@content;
+	}
+}
+@include apply {
+	#logo {
+		color: red;
+	}
+}
+
+@mixin colorful($color: blue) {
+	background-color: $color;
+	@content;
+	border-color: $color;
+}
+$color: red;
+.colors {
+	@include colorful {
+		color: $color;
+	}
+}
+
+@mixin colortest($color: blue) {
+	background-color: $color;
+	border-color: $color;
+}
+$color: red;
+.colors {
+	color: $color;
+	@include colortest();
+}
+
+$grid-width: 40px;
+$gutter-width: 10px;
+@function grid-width-func($n) {
+	@return $n * $grid-width + ($n - 1) * $gutter-width;
+}
+#sidebar {
+	width: grid-width-func(5);
+}
+
+.rgbFunc {
+	$color: rgb(255, 240, 10);
+	color: $color;
+
+	$red: red($color);
+	content: "red - #{$red}";
+
+	$green: green($color);
+	content: "green - #{$green}";
+
+	$blue: blue($color);
+	content: "blue - #{$blue}";
+	
+	$color2: rgb(210, 200, 50);
+	background-color: mix($color, $color2, 50%);
+}
+
+.hslFunc {
+	$color: hsl(50, 70%, 50%);
+	color: $color;
+
+	$hue: hue($color);
+	content: "hue - #{$hue}";
+
+	$saturation: saturation($color);
+	content: "saturation - #{$saturation}";
+
+	$lightness: lightness($color);
+	content: "lightness - #{$lightness}";
+
+	$adjust-hue: adjust-hue($color, 20);
+	color: $adjust-hue;
+	
+	$lighten: lighten($color, 20%);
+	color: $lighten;
+
+	$darken: darken($color, 10%);
+	color: $darken;
+
+	$saturate: saturate($color, 30%);
+	color: $saturate;
+
+	$desaturate: desaturate($color, 10%);
+	color: $desaturate;
+
+	color: grayscale($color);
+	
+	$complement: complement($color);
+	content: "complement - #{$complement}";
+
+	$invert: invert($color);
+	color: $invert;
+}
+
+.opacityFunc {
+	$color: rgba(255, 10, 20, 0.6);
+	color: $color;
+
+	$alpha: alpha($color);
+	content: "alpha - #{$alpha}";
+
+	$opacity: opacity($color);
+	content: "opacity - #{$opacity}";
+
+	$rgba: rgba($color, 0.4);
+	color: $rgba;
+
+	$transparentize: transparentize($color, 0.1);
+	color: $transparentize;
+
+	$fade-out: fade-out($color, 0.1);
+	color: $fade-out;
+
+	$opacify: opacify($color, 0.2);
+	color: $opacify;
+
+	$fade-in: fade-in($color, 0.2);
+	color: $fade-in;
+}
+
+.otherColorFunc {
+	$color: rgb(150, 0 , 150);
+	color: $color;
+
+	$adjust-color: adjust-color($color, $red: 50);
+	content: "adjust-color - #{$adjust-color}";
+
+	$scale-color: scale-color($color, $red: 10%);
+	content: "scale-color - #{$scale-color}";
+	
+	$change-color: change-color($color, $red: 50);
+	content: "change-color - #{$change-color}";
+
+	$ie-hex-str: ie-hex-str($color);
+	content: "ie-hex-str - #{$ie-hex-str}";
+}
+
+.stringsFunc {
+	$string1: "quote";
+	$string2: unquote;
+
+	$unquote: unquote($string1);
+	content: $unquote;
+
+	$quote: quote($string2);
+	content: $quote;
+
+	$str-length: str-length($string1);
+	content: "str-length - #{$str-length}";
+
+	$str-insert: str-insert($string1, "Hei", 2);
+	content: "str-insert - #{$str-insert}";
+
+	$str-index: str-index($string1, "q");
+	content: "str-index - #{$str-index}";
+
+	$str-slice: str-slice($string1, 2, 4);
+	content: "str-slice - #{$str-slice}";
+
+	$to-upper-case: to-upper-case($string1);
+	content: "to-upper-case - #{$to-upper-case}";
+
+	$to-lower-case: to-lower-case($to-upper-case);
+	content: "to-lower-case - #{$to-lower-case}";
+}
+
+.numFunc {
+	content: percentage(0.2);
+
+	content: round(2.5);
+
+	content: ceil(2.1);
+
+	content: floor(2.8);
+
+	content: abs(-2);
+
+	content: min(2, 1, 0);
+
+	content: max(2, 1, 0);
+
+	content: random(50);
+}
+
+.listFunc {
+	$list: "k", "j", "z";
+
+	$length: length($list);
+	content: "length - #{$length}";
+
+	$nth: nth($list, 2);
+	content: "nth - #{$nth}";
+
+	$set-nth: set-nth($list, 2, "jj");
+	content: $set-nth;
+
+	$list1: "a", "b", "c";
+	$join: join($list, $list1);
+	content: "join - #{$join}";
+
+	$append: append($list, "o");
+	content: "append - #{$append}";
+
+	$zip: zip(1px 2px 3px, solid dotted double, white black red);
+	content: "zip - #{$zip}";
+
+	$index: index($list, "j");
+	content: "index - #{$index}";
+
+	$list-separator: list-separator($list);
+	content: "list-separator - #{$list-separator}";
+}
+
+
+.mapFunc {
+	$map: (foo: 1, bar: 2);
+
+	$map-get: map-get($map, "small");
+	content: "map-get - #{$map-get}";
+
+	// map-remove - delete from a map
+	// map-merge - merge two maps
+
+	$map-keys: map-keys($map);
+	content: "map-keys - #{$map-keys}";
+	
+	$map-values: map-values($map);
+	content: "map-values - #{$map-values}";
+
+	$map-has-key: map-has-key($map, "bar");
+	content: "map-has-key - #{$map-has-key}";
+}
+
+.selectorFunc {
+	$selectors: "html" "body" ".wrapper";
+
+	$selector-nest: selector-nest($selectors);
+	content: "selector-nest - #{$selector-nest}";
+
+// feature-exists($feature)
+// Returns whether a feature exists in the current Sass runtime.
+// variable-exists($name)
+// Returns whether a variable with the given name exists in the current scope.
+// global-variable-exists($name)
+// Returns whether a variable with the given name exists in the global scope.
+// function-exists($name)
+// Returns whether a function with the given name exists.
+// mixin-exists($name)
+// Returns whether a mixin with the given name exists.
+// inspect($value)
+// Returns the string representation of a value as it would be represented in Sass.
+// type-of($value)
+// Returns the type of a value.
+// unit($number)
+// Returns the unit(s) associated with a number.
+// unitless($number)
+// Returns whether a number has units.
+// comparable($number1, $number2)
+// Returns whether two numbers can be added, subtracted, or compared.
+// call(name, args)
+// Dynamically calls a Sass function.
+
+
+}
+
+.miscellaneousFunc {
+	$if: if(3 > 2, "true", "false");
+	content: "if - #{$if}";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
